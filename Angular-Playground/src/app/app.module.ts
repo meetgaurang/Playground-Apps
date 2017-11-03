@@ -4,12 +4,14 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SampleComponent } from './sample.component';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { DataBinding } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent
+    SampleComponent,
+    DataBinding
   ],
   imports: [
     BrowserModule,
