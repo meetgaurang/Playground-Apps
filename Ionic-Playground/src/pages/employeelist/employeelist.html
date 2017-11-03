@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Employee List</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let employee of employees" (click)="itemTapped($event, employee)">
+            <ion-icon [name]="employee.icon" item-start></ion-icon>
+            {{employee.name}}
+        </button>
+    </ion-list>
+</ion-content>

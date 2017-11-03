@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Contact Us</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>NAME</ion-label>
+                <ion-input type="text" formControlName="name"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-item *ngIf="!contactForm.controls.name.valid  && (contactForm.controls.name.dirty || submitAttempt)">
+                <p>Please enter name</p>
+        </ion-item>
+
+        <ion-list radio-group formControlName="gender">
+            <ion-list-header>
+                Gender
+            </ion-list-header>
+            <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio value="male"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio value="female"></ion-radio>
+            </ion-item>
+        </ion-list>
+        <ion-item *ngIf="!contactForm.controls.gender.valid  && (contactForm.controls.gender.dirty || submitAttempt)">
+                <p>Please select gender</p>
+        </ion-item>
+
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>DESCRIPTION</ion-label>
+                <ion-textarea formControlName="description"></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <button ion-button type="submit" round full>Submit</button>
+    </form>
+</ion-content>
