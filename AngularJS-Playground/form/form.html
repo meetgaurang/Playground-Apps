@@ -1,0 +1,20 @@
+<h1>Form</h1>
+<div ng-controller="FormController">
+    <form name="userform" ng-submit="submitForm()">
+        Name:<input type="text" ng-model="user.name"/>{{user.name}}<br/>
+        Gender:
+        <select ng-model="user.gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> {{user.gender}}<br/>
+        Hobbies:
+        <input type="checkbox" name="hobbey1" ng-model="user.hobbies.music"> Music {{user.hobbies.music}}<br>
+        <input type="checkbox" name="hobbey2" ng-model="user.hobbies.cricket"> Cricket {{user.hobbies.cricket}}<br>
+        Ready for relocation? 
+        <input type="radio" ng-model="user.relocationchoice" value="yes"> Yes
+        <input type="radio" ng-model="user.relocationchoice" value="no"> No <br>
+        {{user.relocationchoice}}<br>
+
+        <input type="submit"/>
+    </form>
+</div>

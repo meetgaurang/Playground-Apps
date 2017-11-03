@@ -1,0 +1,10 @@
+<h1>Data Binding</h1>
+<div ng-controller="DataBindingController">
+    <h2>One-way Data Binding with curley-braces</h2>
+    {{msg}}
+    <h2>One-way Data Binding with ng-bind</h2>
+    <div ng-bind="msg"></div>
+    <h2>Two-way Data Binding with ng-model</h2>
+    <div ng-model="msg"></div>
+    <input type="text" ng-model="msg"/>
+</div>

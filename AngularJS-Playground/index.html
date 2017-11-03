@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/angular.js" defer></script>
+    <script src="lib/angular-ui-router.js" defer></script>
+    <script src="app.init.js" defer></script>
+    <script src="app.routes.js" defer></script>
+    <script src="home/HomeController.js" defer></script>
+    <script src="databinding/DataBindingController.js" defer></script>
+    <script src="filters/FilterController.js" defer></script>
+    <script src="directives/GPDirective.js" defer></script>
+    <script src="directives/DirectiveController.js" defer></script>
+    <script src="services/ServicesController.js" defer></script>
+    <script src="http/HttpController.js" defer></script>
+    <script src="form/FormController.js" defer></script>
+    
+    <!-- Services -->
+    <script src="services/CustomServices.js" defer></script>
+    <script src="http/HttpService.js" defer></script>
+    <!-- Style sheets -->
+    <link href="lib/bootstrap/bootstrap-grid.min.css" rel="stylesheet">
+</head>
+<body ng-app="demoapp" ng-strict-di>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <b>Demo Title</b>
+            </div>
+            <div class="col-md-9 col-lg-9 col-xl-9">
+                <b>Demo Page</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <div>
+                    <a ui-sref="home" ui-sref-active="active">Home</a>
+                </div>
+                <div>
+                    <a ui-sref="about" ui-sref-active="active">About</a>
+                </div>
+                <div>
+                    <a ui-sref="databinding" ui-sref-active="active">Data Binding</a>
+                </div>
+                <div>
+                    <a ui-sref="filters" ui-sref-active="active">Filters</a>
+                </div>
+                <div>
+                    <a ui-sref="directives" ui-sref-active="active">Directive</a>
+                </div>
+                <div>
+                    <a ui-sref="services" ui-sref-active="active">Services</a>
+                </div>
+                <div>
+                    <a ui-sref="httpcall" ui-sref-active="active">HTTP Calls</a>
+                </div>
+                <div>
+                    <a ui-sref="directives" ui-sref-active="active">Nested Views</a>
+                </div>
+                <div>
+                    <a ui-sref="form" ui-sref-active="active">Forms</a>
+                </div>
+                <div>
+                    <a ui-sref="directives" ui-sref-active="active">Validations</a>
+                </div>
+                <div>
+                    <a ui-sref="directives" ui-sref-active="active">Events</a>
+                </div>
+            </div>
+            <div class="col-md-9 col-lg-9 col-xl-9">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

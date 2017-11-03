@@ -1,0 +1,25 @@
+<h1>Filters</h1>
+<div ng-controller="FilterController">
+    <h2>Uppercase Filter</h2>
+    {{msg | uppercase}}
+    <h2>Lowercase Filter</h2>
+    {{msg | lowercase}}
+    <h2>Currency Filter</h2>
+    {{price | currency : '₹ ' : 2}}
+    <h2>Number Filter</h2>
+    {{price | number : 2}}
+    <h2>OrderBy Filter</h2> (by country)
+    <ul>
+        <li ng-repeat="item in myArray | orderBy: 'country'">{{item}}</li>
+    </ul>
+    <h2>OrderBy Filter</h2> (by population)
+    <ul>
+        <li ng-repeat="item in myArray | orderBy: 'population'">{{item}}</li>
+    </ul>
+    <h2>Filter</h2>
+    <ul>
+        <li ng-repeat="item in myArray | filter: 'Aus'">{{item}}</li>
+    </ul>
+    <h2>Date Filter</h2>
+    {{sampleDate | date : "dd.MM.yyyy"}}
+</div>
